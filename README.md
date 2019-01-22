@@ -5,7 +5,9 @@
 2. Express server, simple REST api with a single 'GET' endpoint  at `/api`. Runs on `localhost:3001` by default.
 
 ### Instrutions
-Use `npm run start-dev` to start both server and client apps. Alternatively, `npm run start` and `npm run client` can be run in separate terminal windows.
+1. Clone project
+2. Install dependencies using `npm i` in the root directory and `yarn` in the `client` directory
+3. Run project using `npm run start-dev` to start both server and client apps. Alternatively, `npm run start` and `npm run client` can be run in separate terminal windows.
 
 ### Comments
 I use `generateData.js` to make write dummy JSON data to `weather.json`. Writing/changing the JSON manually also works.
