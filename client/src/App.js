@@ -11,7 +11,6 @@ class App extends Component {
     fetch(`http://localhost:3001/api/`)
       .then(res => res.json())
       .then(({ weeks }) => {
-        console.log('data', weeks);
         this.setState({
           weeks
         });
@@ -20,11 +19,12 @@ class App extends Component {
 
   render() {
     console.log('App');
-    let weeksUI = this.state.weeks.map(({days}) => {
-      return <Week days={days} />;
+    let weeksUI = this.state.weeks.map(({range, days}) => {
+      return <Week range={range} days={days} />;
     });
     return (
       <div className="App">
+        <h1>Weather App</h1>
         {weeksUI}
       </div>
     );

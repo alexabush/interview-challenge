@@ -8,7 +8,10 @@ class Week extends Component {
       return <Day day={day}></Day>
     })
     return <div className="Week">
-      {daysUI}
+      Week: {this.props.range}
+      <div className='Days'>
+        {daysUI}
+      </div>
     </div>;
   }
 }

@@ -4,10 +4,11 @@ class Day extends Component {
   render() {
     let {date,day,data:{forecast, temp}} = this.props.day
     return <div className="Day">
-      <p>Date: {date}</p>
-      <p>Day: {day}</p>
-      <p>Forcast: {forecast}</p>
-      <p>Temp: {`${temp[0]} ${temp[1]}`}</p>
+      <p>{date}</p>
+      <p>{day}</p>
+      <p>Forecast: {forecast}</p>
+      <p>High: {temp[0]}F</p>
+      <p>Low: {temp[1]}F</p>
     </div>;
   }
 }
