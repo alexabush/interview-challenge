@@ -1,0 +1,166 @@
+{
+  "weeks": [
+    {
+      "days": [
+        {
+          "date": "",
+          "day": "mon",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              59
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "tue",
+          "data": {
+            "forecast": "cloudy",
+            "temp": [
+              60,
+              70
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "wed",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "thur",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "fri",
+          "data": {
+            "forecast": "rainy",
+            "temp": [
+              47,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "sat",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "sun",
+          "data": {
+            "forecast": "foggy",
+            "temp": [
+              45,
+              55
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "date": "",
+          "day": "mon",
+          "data": {
+            "forecast": "foggy",
+            "temp": [
+              50,
+              59
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "tue",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              47,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "wed",
+          "data": {
+            "forecast": "cloudy",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "thur",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "fri",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              50,
+              60
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "sat",
+          "data": {
+            "forecast": "sunny",
+            "temp": [
+              45,
+              55
+            ]
+          }
+        },
+        {
+          "date": "",
+          "day": "sun",
+          "data": {
+            "forecast": "rainy",
+            "temp": [
+              50,
+              55
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
