@@ -1,15 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const fs = require('fs');
 
+// local data, would be replaced by database
+const fs = require('fs');
 let rawdata = fs.readFileSync('./weather.json');
-// let rawdata = fs.readFileSync('./data.json');
 let data = JSON.parse(rawdata);
-console.log(data);
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  console.log('sending data from server');
+router.get('/', function(req, res, next){
   res.json({
     weeks: data.weeks
   })

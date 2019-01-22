@@ -1,47 +1,83 @@
+/**
+ * @generateData Made-up weather data hardcoded in, formats data and writes to weather.json file
+ */
+
 const fs = require('fs');
 
-let rawData = [
-  [
-    ['', 'mon', 'sunny', [50,59]],
-    ['', 'tue', 'cloudy', [60,70]],
-    ['', 'wed', 'sunny', [50,55]],
-    ['', 'thur', 'sunny', [50,55]],
-    ['', 'fri', 'rainy', [47,55]],
-    ['', 'sat', 'sunny', [50,55]],
-    ['', 'sun', 'foggy', [45,55]],
-  ],
-  [
-    ['', 'mon', 'foggy', [50,59]],
-    ['', 'tue', 'sunny', [47,55]],
-    ['', 'wed', 'cloudy', [50,55]],
-    ['', 'thur', 'sunny', [50,55]],
-    ['', 'fri', 'sunny', [50,60]],
-    ['', 'sat', 'sunny', [45,55]],
-    ['', 'sun', 'rainy', [50,55]],
-  ],
-]
+let weatherData = [
+  {
+    range: '1/14-1/20',
+    days: [
+      ['1/14', 'Mon', 'sunny', [50, 59]],
+      ['1/15', 'Tue', 'cloudy', [60, 70]],
+      ['1/16', 'Wed', 'sunny', [50, 55]],
+      ['1/17', 'Thur', 'sunny', [50, 55]],
+      ['1/18', 'Fri', 'rainy', [47, 55]],
+      ['1/19', 'Sat', 'sunny', [50, 55]],
+      ['1/20', 'Sun', 'foggy', [45, 55]]
+    ]
+  },
+  {
+    range: '1/21-1/27',
+    days: [
+      ['1/21', 'Mon', 'foggy', [50, 59]],
+      ['1/22', 'Tue', 'sunny', [47, 55]],
+      ['1/23', 'Wed', 'cloudy', [50, 55]],
+      ['1/24', 'Thur', 'sunny', [50, 55]],
+      ['1/25', 'Fri', 'sunny', [50, 60]],
+      ['1/26', 'Sat', 'sunny', [45, 55]],
+      ['1/27', 'Sun', 'rainy', [50, 55]]
+    ]
+  },
+  {
+    range: '1/28-2/3',
+    days: [
+      ['1/28', 'Mon', 'foggy', [50, 59]],
+      ['1/29', 'Tue', 'cloudy', [47, 55]],
+      ['1/30', 'Wed', 'cloudy', [50, 55]],
+      ['1/31', 'Thur', 'sunny', [50, 55]],
+      ['1/1', 'Fri', 'cloudy', [50, 60]],
+      ['1/2', 'Sat', 'sunny', [45, 55]],
+      ['1/3', 'Sun', 'rainy', [50, 55]]
+    ]
+  }
+];
 
-let month = generateWeeks(rawData)
-let data = JSON.stringify(month);
-fs.writeFileSync('weather.json', data)
+let json = JSON.stringify(generateWeeks(weatherData));
+fs.writeFileSync('weather.json', json);
 
-// could organize in terms of "months" if desired
+// could organize in terms of "Months" if desired
+/**
+ * @param {Object[]} weeks
+ * @returns {Object}
+ */
 function generateWeeks(weeks = []) {
   return {
-      weeks: weeks.map(week => {
-      return generateWeek(week)
+    weeks: weeks.map(week => {
+      return generateWeek(week);
     })
-  }
+  };
 }
-
-function generateWeek(days = []) {
+/**
+ * @param {Object} week - object with range and days keys.
+ * @returns {Object}
+ */
+function generateWeek({ range = '', days = [] }) {
   return {
-      days: days.map(day => {
-      return generateDay(...day)
+    range,
+    days: days.map(day => {
+      return generateDay(...day);
     })
-  }
+  };
 }
 
+/**
+ * @param {string} date - ex. '2/14'
+ * @param {string} day - ex. 'Mon'
+ * @param {string} forecast - ex. 'sunny'
+ * @param {number[]} temp - low/high fahrenheit values ex. [50,70]
+ * @returns {Object}
+ */
 function generateDay(date = '', day = '', forecast = '', temp = []) {
   return {
     date,
@@ -50,5 +86,5 @@ function generateDay(date = '', day = '', forecast = '', temp = []) {
       forecast,
       temp
     }
-  }
+  };
 }

@@ -18,8 +18,10 @@ class App extends Component {
   }
 
   render() {
-    console.log('App');
-    let weeksUI = this.state.weeks.map(({range, days}) => {
+    let weeks = (this.state.weeks.length > 2)
+      ? this.state.weeks.slice(0,2)
+      : this.state.weeks
+    let weeksUI = weeks.map(({range, days}) => {
       return <Week range={range} days={days} />;
     });
     return (

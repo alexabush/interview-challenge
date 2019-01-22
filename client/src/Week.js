@@ -3,7 +3,6 @@ import Day from './Day'
 
 class Week extends Component {
   render() {
-    console.log('Week');
     let daysUI = this.props.days.map(day => {
       return <Day day={day}></Day>
     })
